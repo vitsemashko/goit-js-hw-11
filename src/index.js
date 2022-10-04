@@ -40,7 +40,7 @@ btnLoadMore.addEventListener('click', () => {
   fetchImages(trimmedValue, page).then(foundData => {
     if (foundData.hits.length === 0) {
       Notiflix.Notify.failure(
-        'Sorry, there are no images matching your search query. Please try again.'
+        `We're sorry, but you've reached the end of search results.`
       );
     } else {
       renderImageList(foundData.hits);
